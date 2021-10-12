@@ -7,7 +7,6 @@ import {View,
 import db  from "../../config/firebaseconfig";
 import { collection, query,onSnapshot,deleteDoc,doc } from "firebase/firestore";
 
-//import firestore from '@react-native-firebase/firestore'
 import {FontAwesome} from '@expo/vector-icons';
 import styles from './style';
 
@@ -31,9 +30,6 @@ export default function Task({navigation}){
      })
       return () => unsub();
     },[])
-    //console.log(task);
-
-
    return (
     <View style={styles.container}>
       <FlatList

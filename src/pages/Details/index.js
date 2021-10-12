@@ -9,7 +9,6 @@ export default function Details({navigation,route}){
     const idTask = route.params.id;
 
     function editTask(description,id){
-        //alert("Teste"+id);
         const docRef = doc(db, "Tasks",id);
         const payload = {
             description: description,

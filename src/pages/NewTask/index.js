@@ -6,15 +6,15 @@ import styles from './style';
 
 export default function NewTask({navigation}){
     const [description,setDescription] = useState(null);
+    
     function newTask(){
-        
         const collectionRef = collection(db, "Tasks");
         const payload = {
             description: description,
             status: false
             };
          addDoc(collectionRef,payload);
-        navigation.navigate("Task");
+         navigation.navigate("Task");
      }
     return(
         <View style={styles.container}>
